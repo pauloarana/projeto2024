@@ -1,0 +1,16 @@
+:root {
+    --cor-do-fundo: black;
+}
+body {
+    background-color: darkgreen;
+    color: cadetblue;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+.conteudo-principal {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+max-width: 1200px;
+}margin
