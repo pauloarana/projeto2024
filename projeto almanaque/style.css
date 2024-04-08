@@ -1,7 +1,12 @@
 :root {
     --cor-do-fundo: black;
-    
+    --verde--: green;
+    --branco--: white;
+    --botao-ativo: chocolate;
+    --botao-inativo: brown;
+    --texto-fundo: darkgray;    
 }
+
 body {
     background-color: rgb(61, 61, 61);
     color: rgb(255, 255, 255);
@@ -14,6 +19,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 max-width: 1200px;
+width: 100%;
 margin: 0 auto;
 }
 
@@ -24,13 +30,13 @@ margin: 0 auto;
 }
 
 .titulo-principal span {
-    color: var(--verde);
+    color: var(--verde--);
 }
 
 .botao {
     font-family: 'Chakra Patch', sans-serif;
     background-color: var(--botao-inativo);
-    color: var(--branco);
+    color: var(--branco--);
     display: flex;
     justify-content: center;
     padding: 1em;
@@ -51,11 +57,32 @@ margin: 0 auto;
     display: block;
 }
 
-.ativo{
+.botao.ativo{
     background-color: var(--botao-ativo);
-    border-bottom: 4px solid var(--verde);
+    border-bottom: 4px solid var(--verde--);
 }
 
+.abas-textos{
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.aba-conteudo.ativo{
+    display: block;
+}
+
+.aba-conteudo{
+    display: none;
+}
+
+.aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+}
+.aba-conteudo-titulo-secundario{
+    
+}
 @media screen and (min-width: 768px) {
     .botoes {
         display: flex;
@@ -65,7 +92,7 @@ margin: 0 auto;
         border-radius: 40px 0 0 0;
     }
 
-    .botao: :last-child {
+    .botao:last-child {
         border-radius: 0 40px 0 0;
     }
 }
